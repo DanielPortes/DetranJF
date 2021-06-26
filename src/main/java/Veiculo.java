@@ -2,14 +2,9 @@ public abstract class Veiculo
 {
 
     private String placa;
-    private String modelo;
-    private int ano;
     private Proprietario proprietario;
-    private float potencia;
+    private int ano;
     private long codigoChassi;
-    private String carroceria;
-    private String local;
-    private String cor;
     private String situacao;
     private float totalMulta;
 
@@ -45,15 +40,6 @@ public abstract class Veiculo
         this.placa = placa;
     }
 
-    public String getModelo ()
-    {
-        return modelo;
-    }
-
-    public void setModelo (String modelo)
-    {
-        this.modelo = modelo;
-    }
 
     public int getAno ()
     {
@@ -75,16 +61,6 @@ public abstract class Veiculo
         this.proprietario = proprietario;
     }
 
-    public float getPotencia ()
-    {
-        return potencia;
-    }
-
-    public void setPotencia (float potencia)
-    {
-        this.potencia = potencia;
-    }
-
     public long getCodigoChassi ()
     {
         return codigoChassi;
@@ -94,34 +70,10 @@ public abstract class Veiculo
     {
         this.codigoChassi = codigoChassi;
     }
-
-    public String getCorroceria ()
-    {
-        return carroceria;
-    }
-
-    public void setCorroceria (String carroceria)
-    {
-        this.carroceria = carroceria;
-    }
-
-    public String getLocal ()
-    {
-        return local;
-    }
-
-    public void setLocal (String local)
-    {
-        this.local = local;
-    }
-
-    public String getCor ()
-    {
-        return cor;
-    }
-
-    public void setCor (String cor)
-    {
-        this.cor = cor;
-    }
 }
+
+
+
+
+
+

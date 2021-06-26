@@ -2,7 +2,6 @@ public abstract class Pessoa
 {
     private String nome;
 
-
     public String getNome ()
     {
         return nome;

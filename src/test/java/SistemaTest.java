@@ -56,26 +56,28 @@ class SistemaTest
 
     @Test
     void calcularArrecadacao() {
+        Sistema sistema = new Sistema();
         Carro carro = new Carro();
         Caminhao caminhao = new Caminhao();
         Motocicleta moto = new Motocicleta();
         carro.setAno(200);
         moto.setAno(400);
         caminhao.setAno(100);
-        List<Veiculo> lista = new ArrayList<Veiculo>();
-        lista.add(carro);
-        lista.add(moto);
-        lista.add(caminhao);
-        assertEquals(600.0f, Sistema.calcularArrecadacao(lista));
+        Proprietario proprietario = new Proprietario();
+        sistema.registrarVeiculo("101", proprietario, carro);
+        sistema.registrarVeiculo("102", proprietario, caminhao);
+        sistema.registrarVeiculo("103", proprietario, moto);
+        assertEquals(600.0f, sistema.calcularArrecadacao());
     }
 
     @Test
     void registrarVeiculo() {
+        Sistema sistema = new Sistema();
         Carro carro = new Carro();
         Proprietario proprietario = new Proprietario();
         carro.setPlaca("1010");
         carro.setProprietario(proprietario);
-        assertEquals("veiculo registrado!",Sistema.registrarVeiculo(carro.getPlaca(),proprietario,carro));
+        assertEquals("veiculo registrado!",sistema.registrarVeiculo(carro.getPlaca(),proprietario,carro));
 
     }
 }
