@@ -57,7 +57,7 @@ public abstract class Veiculo
         return proprietario;
     }
 
-    public void setProprietario (Pessoa proprietario)
+    public void setProprietario (Proprietario proprietario)
     {
         this.proprietario = proprietario;
     }

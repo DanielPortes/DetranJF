@@ -7,7 +7,7 @@ public abstract class Sistema
         System.out.println("proprietario: " + veiculo.getProprietario());
     }
 
-    public static void registrarVeiculo (String placa, Pessoa proprietario, Veiculo veiculo)
+    public static void registrarVeiculo (String placa, Proprietario proprietario, Veiculo veiculo)
     {
         if (veiculo.getProprietario() != null)
         {
@@ -23,20 +23,26 @@ public abstract class Sistema
 
     public abstract float CalcularIPVA ();
 
-    public static void transferirVeiculo(Proprietario proprietario,Veiculo veiculo)
+    public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
     {
-        {
-            veiculo.setProprietario(proprietario);
-        }
-        public static void emitirPlaca (Veiculo veiculo)
-        {
-            System.out.println("A placa do veículo é:" + veiculo.getPlaca());
-        }
-        public static void emitirNomeProprietario (Veiculo veiculo)
-        {
-            System.out.println("O nome do proprietario é:" + veiculo.getProprietario());
-        }
+
+        veiculo.setProprietario(proprietario);
     }
 
+    public static void emitirPlaca (Veiculo veiculo)
+    {
+
+        System.out.println("A placa do veículo é:" + veiculo.getPlaca());
+
+    }
+
+    public static void emitirNomeProprietario (Veiculo veiculo)
+
+    {
+        System.out.println("O nome do proprietario é:" + veiculo.getProprietario());
+    }
 
 }
+
+
+
