@@ -1,10 +1,10 @@
-public abstract class Sistema
+public class Sistema
 {
-    public static void emiteSituacaoVeiculo (Veiculo veiculo)
+    public static String emiteSituacaoVeiculo (Veiculo veiculo)
     {
-        System.out.println("Codigo chassi: " + veiculo.getCodigoChassi());
-        System.out.println("Montante de multas: " + veiculo.getTotalMulta());
-        System.out.println("proprietario: " + veiculo.getProprietario());
+        return "Chassi:" + veiculo.getCodigoChassi() + " "
+                + " Total de multas:" + veiculo.getTotalMulta() + " "
+                + "Nome propietario:" + veiculo.getProprietario().getNome();
     }
 
     public static void registrarVeiculo (String placa, Proprietario proprietario, Veiculo veiculo)
@@ -23,21 +23,17 @@ public abstract class Sistema
 
     public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
     {
-
         veiculo.setProprietario(proprietario);
     }
 
-    public static void emitirPlaca (Veiculo veiculo)
+    public static String emitirPlaca (Veiculo veiculo)
     {
-
-        System.out.println("A placa do veículo é:" + veiculo.getPlaca());
-
+        return "A placa do veículo é:" + veiculo.getPlaca();
     }
 
-    public static void emitirNomeProprietario (Veiculo veiculo)
-
+    public static String emitirNomeProprietario (Veiculo veiculo)
     {
-        System.out.println("O nome do proprietario é:" + veiculo.getProprietario());
+        return "O nome do proprietario é:" + veiculo.getProprietario().getNome();
     }
 
 }

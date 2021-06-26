@@ -7,10 +7,21 @@ public abstract class Veiculo
     private Proprietario proprietario;
     private float potencia;
     private long codigoChassi;
-    private String corroceria;
+    private String carroceria;
     private String local;
     private String cor;
+    private String situacao;
     private float totalMulta;
+
+    public String getSituacao ()
+    {
+        return situacao;
+    }
+
+    public void setSituacao (String situacao)
+    {
+        this.situacao = situacao;
+    }
 
     public abstract float calcularIPVA ();
 
@@ -86,12 +97,12 @@ public abstract class Veiculo
 
     public String getCorroceria ()
     {
-        return corroceria;
+        return carroceria;
     }
 
-    public void setCorroceria (String corroceria)
+    public void setCorroceria (String carroceria)
     {
-        this.corroceria = corroceria;
+        this.carroceria = carroceria;
     }
 
     public String getLocal ()
