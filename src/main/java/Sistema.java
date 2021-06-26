@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Sistema
 {
-    private List<Veiculo> veiculos = new ArrayList<Veiculo>();
+    private List<Veiculo> veiculos = new ArrayList<>();
 
     public static String emiteSituacaoVeiculo (Veiculo veiculo)
     {
