@@ -5,35 +5,43 @@ public class Pessoa
     private String situacaoCivil;
     private long cpf;
 
-    public String getNome() {
+    public String getNome ()
+    {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome (String nome)
+    {
         this.nome = nome;
     }
 
-    public int getIdade() {
+    public int getIdade ()
+    {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade (int idade)
+    {
         this.idade = idade;
     }
 
-    public String getSituacaoCivil() {
+    public String getSituacaoCivil ()
+    {
         return situacaoCivil;
     }
 
-    public void setSituacaoCivil(String situacaoCivil) {
+    public void setSituacaoCivil (String situacaoCivil)
+    {
         this.situacaoCivil = situacaoCivil;
     }
 
-    public long getCpf() {
+    public long getCpf ()
+    {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf (int cpf)
+    {
         this.cpf = cpf;
     }
 }
