@@ -3,7 +3,7 @@ public class Pessoa
     private String nome;
     private int idade;
     private String situacaoCivil;
-    private long int cpf;
+    private long cpf;
 
     public String getNome() {
         return nome;
@@ -29,7 +29,7 @@ public class Pessoa
         this.situacaoCivil = situacaoCivil;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
