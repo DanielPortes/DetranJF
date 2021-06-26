@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SistemaTest
@@ -14,7 +17,9 @@ class SistemaTest
         motocicleta.setSituacao("Irregular");
         motocicleta.setTotalMulta(1000);
         motocicleta.setProprietario(proprietario);
-        assertEquals("Chassi:" + motocicleta.getCodigoChassi() + " " + " Total de multas:" + motocicleta.getTotalMulta() + " " + "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
+        assertEquals("Chassi:" + motocicleta.getCodigoChassi() + " " +
+                    " Total de multas:" + motocicleta.getTotalMulta() + " " +
+                    "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
     }
 
 
@@ -32,21 +37,45 @@ class SistemaTest
     }
 
     @Test
-    void testEmitirPlaca() {
+    void testEmitirPlaca ()
+    {
         Carro carro = new Carro();
         carro.setPlaca("1010");
-        assertEquals("A placa do veículo é:1010",Sistema.emitirPlaca(carro));
+        assertEquals("A placa do veículo é:1010", Sistema.emitirPlaca(carro));
     }
 
     @Test
-    void emitirNomeProprietario() {
+    void emitirNomeProprietario ()
+    {
         Caminhao caminhao = new Caminhao();
-        Proprietario proprietario  = new Proprietario();
+        Proprietario proprietario = new Proprietario();
         proprietario.setNome("Joao");
         caminhao.setProprietario(proprietario);
-        assertEquals("Joao",caminhao.getProprietario().getNome());
-
+        assertEquals("O nome do proprietario é:" + caminhao.getProprietario().getNome(), Sistema.emitirNomeProprietario(caminhao));
     }
 
+    @Test
+    void calcularArrecadacao() {
+        Carro carro = new Carro();
+        Caminhao caminhao = new Caminhao();
+        Motocicleta moto = new Motocicleta();
+        carro.setAno(200);
+        moto.setAno(400);
+        caminhao.setAno(100);
+        List<Veiculo> lista = new ArrayList<Veiculo>();
+        lista.add(carro);
+        lista.add(moto);
+        lista.add(caminhao);
+        assertEquals(600.0f, Sistema.calcularArrecadacao(lista));
+    }
 
+    @Test
+    void registrarVeiculo() {
+        Carro carro = new Carro();
+        Proprietario proprietario = new Proprietario();
+        carro.setPlaca("1010");
+        carro.setProprietario(proprietario);
+        assertEquals("veiculo registrado!",Sistema.registrarVeiculo(carro.getPlaca(),proprietario,carro));
+
+    }
 }

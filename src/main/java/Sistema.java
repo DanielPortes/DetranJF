@@ -1,5 +1,8 @@
+import java.util.List;
+
 public class Sistema
 {
+    private List<Veiculo> veiculos;
     public static String emiteSituacaoVeiculo (Veiculo veiculo)
     {
         return "Chassi:" + veiculo.getCodigoChassi() + " "
@@ -7,18 +10,25 @@ public class Sistema
                 + "Nome propietario:" + veiculo.getProprietario().getNome();
     }
 
-    public static void registrarVeiculo (String placa, Proprietario proprietario, Veiculo veiculo)
+    public static String registrarVeiculo (String placa, Proprietario proprietario, Veiculo veiculo)
     {
-        if (veiculo.getProprietario() != null)
-        {
-            System.out.println("veiculo ja registrado, use o metodo transferir veiculo");
+        veiculo.setPlaca(placa);
+        veiculo.setProprietario(proprietario);
+        return "veiculo registrado!";
+    }
+
+    public static float calcularArrecadacao(List<Veiculo> veiculos) {
+        float totalArrecadado = 0.0f;
+        for (Veiculo veiculo : veiculos) {
+            totalArrecadado += veiculo.calcularIPVA();
         }
-        else
-        {
-            veiculo.setPlaca(placa);
-            veiculo.setProprietario(proprietario);
-            System.out.println("veiculo registrado!");
-        }
+        return totalArrecadado;
+    }
+
+
+    private void atualizaListaVeiculos (Veiculo veiculo)
+    {
+        veiculos.add(veiculo);
     }
 
     public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
