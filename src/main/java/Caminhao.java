@@ -1,6 +1,6 @@
 public class Caminhao extends Veiculo
 {
-    public float CalcularIPVA ()
+    public float calcularIPVA ()
     {
         return (this.getAno() * 2);
     }

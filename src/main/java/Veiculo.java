@@ -12,6 +12,8 @@ public abstract class Veiculo
     private String cor;
     private float totalMulta;
 
+    public abstract float calcularIPVA ();
+
     public float getTotalMulta ()
     {
         return totalMulta;

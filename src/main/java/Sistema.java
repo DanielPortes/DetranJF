@@ -21,7 +21,6 @@ public abstract class Sistema
         }
     }
 
-    public abstract float CalcularIPVA ();
 
     public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
     {
