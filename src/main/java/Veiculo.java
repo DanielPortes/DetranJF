@@ -4,13 +4,23 @@ public abstract class Veiculo
     private String placa;
     private String modelo;
     private int ano;
-    private Pessoa proprietario;
+    private Proprietario proprietario;
     private float potencia;
     private long codigoChassi;
     private String corroceria;
     private String local;
     private String cor;
     private float totalMulta;
+
+    public float getTotalMulta ()
+    {
+        return totalMulta;
+    }
+
+    public void setTotalMulta (float totalMulta)
+    {
+        this.totalMulta = totalMulta;
+    }
 
     public String getPlaca ()
     {
