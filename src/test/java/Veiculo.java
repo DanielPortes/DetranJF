@@ -1,7 +1,7 @@
-public class Veiculo
+public abstract class Veiculo
 {
 
-    private String placa;
+    protected String placa;
     private String modelo;
     private int ano;
     private Pessoa proprietario;
@@ -11,8 +11,6 @@ public class Veiculo
     private String local;
     private String cor;
 
-    public Veiculo (long codigoChassi)
-    {
-        this.codigoChassi = codigoChassi;
-    }
+
+
 }
