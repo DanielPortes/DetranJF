@@ -21,7 +21,6 @@ public abstract class Sistema
         }
     }
 
-
     public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
     {
 
