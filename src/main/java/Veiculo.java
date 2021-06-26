@@ -10,6 +10,7 @@ public abstract class Veiculo
     private String corroceria;
     private String local;
     private String cor;
+    private float totalMulta;
 
     public String getPlaca ()
     {
