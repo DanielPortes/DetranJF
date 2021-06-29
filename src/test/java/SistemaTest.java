@@ -89,4 +89,12 @@ class SistemaTest
         caminhao.setLimiteCarga(345);
         assertEquals("A carga limite do caminhao e:" + caminhao.getLimiteCarga(), Sistema.consultaCargaLimite(caminhao));
     }
+
+    @Test
+    void consultaSituacao() {
+        Carro carro = new Carro(6,1234);
+        carro.setSituacao("Irregular");
+        assertEquals("A situação do veículo e:" + carro.getSituacao(),Sistema.consultaSituacao(carro));
+    }
+
 }

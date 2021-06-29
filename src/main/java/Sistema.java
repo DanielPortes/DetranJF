@@ -54,6 +54,10 @@ public class Sistema
     public static String consultaCargaLimite(Caminhao caminhao){
         return "A carga limite do caminhao e:" + caminhao.getLimiteCarga();
     }
+
+    public static String consultaSituacao(Veiculo veiculo){
+        return "A situação do veículo e:" + veiculo.getSituacao();
+    }
 }
 
 
