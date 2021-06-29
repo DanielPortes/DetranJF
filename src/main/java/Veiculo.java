@@ -40,7 +40,6 @@ public abstract class Veiculo
         this.placa = placa;
     }
 
-
     public int getAno ()
     {
         return ano;

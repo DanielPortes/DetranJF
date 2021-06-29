@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Sistema
 {
-    private List<Veiculo> veiculos = new ArrayList<>();
+    private List<Veiculo> veiculosCadastradosSistema = new ArrayList<>();
 
     public static String emiteSituacaoVeiculo (Veiculo veiculo)
     {
@@ -14,7 +14,7 @@ public class Sistema
 
     private void atualizaListaVeiculos (Veiculo veiculo)
     {
-        veiculos.add(veiculo);
+        veiculosCadastradosSistema.add(veiculo);
     }
 
     public String registrarVeiculo (String placa, Proprietario proprietario, Veiculo veiculo)
@@ -26,14 +26,15 @@ public class Sistema
         return "veiculo registrado!";
     }
 
-    public float calcularArrecadacao() {
+    public float calcularArrecadacao ()
+    {
         float totalArrecadado = 0.0f;
-        for (Veiculo veiculo : this.veiculos) {
+        for (Veiculo veiculo : this.veiculosCadastradosSistema)
+        {
             totalArrecadado += veiculo.calcularIPVA();
         }
         return totalArrecadado;
     }
-
 
     public static void transferirVeiculo (Proprietario proprietario, Veiculo veiculo)
     {
@@ -50,6 +51,9 @@ public class Sistema
         return "O nome do proprietario é:" + veiculo.getProprietario().getNome();
     }
 
+    public static String consultaCargaLimite(Caminhao caminhao){
+        return "A carga limite do caminhao e:" + caminhao.getLimiteCarga();
+    }
 }
 
 

@@ -18,8 +18,8 @@ class SistemaTest
         motocicleta.setTotalMulta(1000);
         motocicleta.setProprietario(proprietario);
         assertEquals("Chassi:" + motocicleta.getCodigoChassi() + " " +
-                    " Total de multas:" + motocicleta.getTotalMulta() + " " +
-                    "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
+                " Total de multas:" + motocicleta.getTotalMulta() + " " +
+                "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
     }
 
 
@@ -55,7 +55,8 @@ class SistemaTest
     }
 
     @Test
-    void calcularArrecadacao() {
+    void calcularArrecadacao ()
+    {
         Sistema sistema = new Sistema();
         Carro carro = new Carro();
         Caminhao caminhao = new Caminhao();
@@ -71,13 +72,21 @@ class SistemaTest
     }
 
     @Test
-    void registrarVeiculo() {
+    void registrarVeiculo ()
+    {
         Sistema sistema = new Sistema();
         Carro carro = new Carro();
         Proprietario proprietario = new Proprietario();
         carro.setPlaca("1010");
         carro.setProprietario(proprietario);
-        assertEquals("veiculo registrado!",sistema.registrarVeiculo(carro.getPlaca(),proprietario,carro));
+        assertEquals("veiculo registrado!", sistema.registrarVeiculo(carro.getPlaca(), proprietario, carro));
+    }
 
+    @Test
+    void consultaCargaLimite ()
+    {
+        Caminhao caminhao = new Caminhao(123, 1234567);
+        caminhao.setLimiteCarga(345);
+        assertEquals("A carga limite do caminhao e:" + caminhao.getLimiteCarga(), Sistema.consultaCargaLimite(caminhao));
     }
 }
