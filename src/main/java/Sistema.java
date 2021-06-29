@@ -1,5 +1,13 @@
+/*
+GRUPO:
+        MATHEUS PEDRO ZANCANELLA BARBOZA 202035005
+        DANIEL FAGUNDES PORTES FERNANDES 201965574C
+*/
+
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Sistema
 {
@@ -51,12 +59,19 @@ public class Sistema
         return "O nome do proprietario é:" + veiculo.getProprietario().getNome();
     }
 
-    public static String consultaCargaLimite(Caminhao caminhao){
+    public static String consultaCargaLimite (Caminhao caminhao)
+    {
         return "A carga limite do caminhao e:" + caminhao.getLimiteCarga();
     }
 
-    public static String consultaSituacao(Veiculo veiculo){
+    public static String consultaSituacao (Veiculo veiculo)
+    {
         return "A situação do veículo e:" + veiculo.getSituacao();
+    }
+
+    public static String consultaTotalPassageiros (Carro carro)
+    {
+        return "O total de passageiros desse veículo e:" + carro.getTotalPassageiro();
     }
 }
 

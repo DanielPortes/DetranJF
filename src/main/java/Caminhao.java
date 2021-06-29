@@ -2,11 +2,12 @@ public class Caminhao extends Veiculo
 {
     private float limiteCarga;
 
-    public Caminhao (float limiteCarga,long codigoChassi)
+    public Caminhao (float limiteCarga, long codigoChassi)
     {
         this.limiteCarga = limiteCarga;
         this.setCodigoChassi(codigoChassi);
     }
+
     public Caminhao ()
     {
     }

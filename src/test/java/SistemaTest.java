@@ -1,3 +1,9 @@
+/*
+GRUPO:
+        MATHEUS PEDRO ZANCANELLA BARBOZA 202035005
+        DANIEL FAGUNDES PORTES FERNANDES 201965574C
+*/
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -91,10 +97,29 @@ class SistemaTest
     }
 
     @Test
-    void consultaSituacao() {
-        Carro carro = new Carro(6,1234);
+    void consultaSituacao ()
+    {
+        Carro carro = new Carro(6, 1234);
         carro.setSituacao("Irregular");
-        assertEquals("A situação do veículo e:" + carro.getSituacao(),Sistema.consultaSituacao(carro));
+        assertEquals("A situação do veículo e:" + carro.getSituacao(), Sistema.consultaSituacao(carro));
+    }
+
+    @Test
+    void deveRetornarSituacaoVeiculo ()
+    {
+        Carro carro = new Carro(3, 1010);
+        carro.setTotalPassageiro(5);
+        carro.setSituacao("Irregular");
+        carro.setTotalMulta(100);
+        assertEquals("Irregular", carro.getSituacao());
+    }
+
+    @Test
+    void consultaTotalPassageiros ()
+    {
+        Carro carro = new Carro(5, 1234);
+        assertEquals("O total de passageiros desse veículo e:" + carro.getTotalPassageiro(), Sistema.consultaTotalPassageiros(carro));
+
     }
 
 }
