@@ -28,5 +28,14 @@ public class Carro extends Veiculo
         return (this.getAno());
     }
 
+    public String retornaTodosDadosVeiculo ()
+    {
+        return "tipo do veiculo: Carro" + " "
+                + "Chassi:" + this.getCodigoChassi() + " "
+                + " Total de multas: " + this.getTotalMulta() + " "
+                + "Nome propietario: " + this.getProprietario().getNome() + " "
+                + "limite de passageiros: " + this.totalPassageiro;
+    }
+
 
 }

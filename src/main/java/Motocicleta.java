@@ -5,4 +5,13 @@ public class Motocicleta extends Veiculo
     {
         return (this.getAno() / 2.0f);
     }
+
+    public String retornaTodosDadosVeiculo ()
+    {
+        return "tipo do veiculo: motoclicleta" + " "
+                + "Chassi:" + this.getCodigoChassi() + " "
+                + " Total de multas:" + this.getTotalMulta() + " "
+                + "Nome propietario:" + this.getProprietario().getNome();
+    }
+
 }

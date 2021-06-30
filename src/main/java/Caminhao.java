@@ -26,4 +26,13 @@ public class Caminhao extends Veiculo
     {
         return (this.getAno() * 2);
     }
+
+    public String retornaTodosDadosVeiculo ()
+    {
+        return "tipo do veiculo: Caminhao"
+                + "Chassi:" + this.getCodigoChassi() + " "
+                + " Total de multas:" + this.getTotalMulta() + " "
+                + "Nome propietario:" + this.getProprietario().getNome() + " "
+                + "limite de carga: " + this.limiteCarga;
+    }
 }

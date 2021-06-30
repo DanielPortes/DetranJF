@@ -18,6 +18,8 @@ public abstract class Veiculo
         this.situacao = situacao;
     }
 
+    public abstract String retornaTodosDadosVeiculo ();
+
     public abstract float calcularIPVA ();
 
     public float getTotalMulta ()

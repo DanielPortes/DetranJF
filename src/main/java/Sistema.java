@@ -13,13 +13,6 @@ public class Sistema
 {
     private List<Veiculo> veiculosCadastradosSistema = new ArrayList<>();
 
-    public static String emiteSituacaoVeiculo (Veiculo veiculo)
-    {
-        return "Chassi:" + veiculo.getCodigoChassi() + " "
-                + " Total de multas:" + veiculo.getTotalMulta() + " "
-                + "Nome propietario:" + veiculo.getProprietario().getNome();
-    }
-
     private void atualizaListaVeiculos (Veiculo veiculo)
     {
         veiculosCadastradosSistema.add(veiculo);
@@ -30,8 +23,13 @@ public class Sistema
         veiculo.setPlaca(placa);
         veiculo.setProprietario(proprietario);
 
-        this.atualizaListaVeiculos(veiculo);
+        atualizaListaVeiculos(veiculo);
         return "veiculo registrado!";
+    }
+
+    public static String emiteSituacaoVeiculo (Veiculo veiculo)
+    {
+        return veiculo.retornaTodosDadosVeiculo();
     }
 
     public float calcularArrecadacao ()

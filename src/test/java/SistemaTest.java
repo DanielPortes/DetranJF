@@ -15,19 +15,57 @@ class SistemaTest
 {
 
     @Test
-    void emiteSituacaoVeiculo ()
+    void emiteSituacaoVeiculoMotocicleta ()
     {
         Motocicleta motocicleta = new Motocicleta();
         Proprietario proprietario = new Proprietario();
-        proprietario.setNome("Carlos");
+
+        proprietario.setNome("Carlinhos");
         motocicleta.setSituacao("Irregular");
-        motocicleta.setTotalMulta(1000);
+        motocicleta.setTotalMulta(1000.0f);
         motocicleta.setProprietario(proprietario);
-        assertEquals("Chassi:" + motocicleta.getCodigoChassi() + " " +
-                " Total de multas:" + motocicleta.getTotalMulta() + " " +
-                "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
+
+        assertEquals("tipo do veiculo: motoclicleta" + " "
+                + "Chassi:" + motocicleta.getCodigoChassi() + " "
+                + " Total de multas:" + motocicleta.getTotalMulta() + " "
+                + "Nome propietario:" + motocicleta.getProprietario().getNome(), Sistema.emiteSituacaoVeiculo(motocicleta));
     }
 
+    @Test
+    void emiteSituacaoVeiculoCarro ()
+    {
+        Carro carro = new Carro();
+        Proprietario proprietario = new Proprietario();
+
+        proprietario.setNome("Joaozinho");
+        carro.setSituacao("Regular");
+        carro.setTotalMulta(0.0f);
+        carro.setProprietario(proprietario);
+
+        assertEquals("tipo do veiculo: Carro" + " "
+                + "Chassi:" + carro.getCodigoChassi() + " "
+                + " Total de multas: " + carro.getTotalMulta() + " "
+                + "Nome propietario: " + carro.getProprietario().getNome() + " "
+                + "limite de passageiros: " + carro.getTotalPassageiro(), Sistema.emiteSituacaoVeiculo(carro));
+    }
+
+    @Test
+    void emiteSituacaoVeiculoCaminhao ()
+    {
+        Caminhao caminhao = new Caminhao();
+        Proprietario proprietario = new Proprietario();
+
+        proprietario.setNome("Carlos");
+        caminhao.setSituacao("Irregular");
+        caminhao.setTotalMulta(1000);
+        caminhao.setProprietario(proprietario);
+
+        assertEquals("tipo do veiculo: Caminhao"
+                + "Chassi:" + caminhao.getCodigoChassi() + " "
+                + " Total de multas:" + caminhao.getTotalMulta() + " "
+                + "Nome propietario:" + caminhao.getProprietario().getNome() + " "
+                + "limite de carga: " + caminhao.getLimiteCarga(), Sistema.emiteSituacaoVeiculo(caminhao));
+    }
 
     @Test
     void transferirVeiculo ()
